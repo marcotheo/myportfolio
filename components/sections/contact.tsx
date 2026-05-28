@@ -57,7 +57,7 @@ export function Contact() {
           className="mb-12 flex flex-wrap items-center justify-center gap-4"
         >
           <Button size="lg" className="group gap-2" asChild>
-            <a href="mailto:[EMAIL_ADDRESS]">
+            <a href="mailto:marcotheobutalid@gmail.com">
               <Mail className="h-5 w-5" />
               Send Email
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -66,7 +66,7 @@ export function Contact() {
 
           <Button size="lg" variant="outline" className="gap-2" asChild>
             <a
-              href="[LINKEDIN_URL]"
+              href="https://www.linkedin.com/in/marcobutalid/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -76,7 +76,7 @@ export function Contact() {
           </Button>
 
           <Button size="lg" variant="outline" className="gap-2" asChild>
-            <a href="[GITHUB_URL]" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/marcotheo" target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-5 w-5" />
               GitHub
             </a>
@@ -88,7 +88,7 @@ export function Contact() {
           className="border-t border-white/10 pt-8"
         >
           <p className="text-sm text-neutral-500">
-            Based in [LOCATION] • Available for remote opportunities
+            Based in Philippines • Available for remote opportunities
           </p>
         </motion.div>
       </motion.div>

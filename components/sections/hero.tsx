@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, ExternalLink, Mail } from "lucide-react"
+import { ArrowRight, ExternalLink, Mail, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const container = {
@@ -90,6 +90,17 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
+              asChild
+              className="gap-2"
+            >
+              <a href="/Marco_Butalid_CV.pdf" download>
+                <Download className="h-4 w-4" />
+                Download CV
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
               onClick={() => handleScroll("#contact")}
               className="gap-2"
             >
@@ -103,7 +114,7 @@ export function Hero() {
               className="gap-2"
             >
               <a
-                href="[GITHUB_URL]"
+                href="https://github.com/marcotheo"
                 target="_blank"
                 rel="noopener noreferrer"
               >

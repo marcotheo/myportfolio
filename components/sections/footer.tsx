@@ -11,7 +11,7 @@ export function Footer() {
 
           <div className="flex items-center gap-6">
             <a
-              href="[GITHUB_URL]"
+              href="https://github.com/marcotheo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-neutral-400 transition-colors hover:text-neutral-200"
@@ -19,7 +19,7 @@ export function Footer() {
               GitHub
             </a>
             <a
-              href="[LINKEDIN_URL]"
+              href="https://www.linkedin.com/in/marcobutalid/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-neutral-400 transition-colors hover:text-neutral-200"
@@ -27,7 +27,7 @@ export function Footer() {
               LinkedIn
             </a>
             <a
-              href="mailto:[EMAIL_ADDRESS]"
+              href="mailto:marcotheobutalid@gmail.com"
               className="text-sm text-neutral-400 transition-colors hover:text-neutral-200"
             >
               Email
