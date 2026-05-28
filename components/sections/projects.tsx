@@ -14,48 +14,73 @@ interface Project {
   stack: string[]
   github?: string
   demo?: string
+  demoLabel?: string
   image: string
 }
 
 const projects: Project[] = [
   {
-    title: "[PROJECT_NAME_1]",
+    title: "KardOps ERP",
     description:
-      "[PROJECT_DESCRIPTION_1] — A scalable SaaS platform built with microservices architecture, handling real-time processing and high-throughput workloads.",
+      "A backend-focused ERP platform built to streamline inventory operations, invoicing, payment allocation, reporting, and business workflows at scale.",
     highlights: [
-      "Microservices architecture with event-driven communication",
-      "Kubernetes orchestration with auto-scaling",
-      "PostgreSQL with read replicas and caching layer",
+      "Advanced payment allocation and deduction processing workflows",
+      "Scalable inventory, invoicing, and reporting system architecture",
+      "Cloud-backed SaaS infrastructure with secure authentication systems",
     ],
-    stack: ["Node.js", "PostgreSQL", "Redis", "Docker", "Kubernetes", "AWS"],
+    stack: [
+      "React",
+      "TypeScript",
+      "TRPC",
+      "shadcn/ui",
+      "PostgreSQL",
+      "AWS",
+      "Drizzle ORM",
+    ],
     github: "[GITHUB_PROJECT_1_URL]",
     demo: "[DEMO_PROJECT_1_URL]",
     image: "[PROJECT_1_SCREENSHOT]",
   },
   {
-    title: "[PROJECT_NAME_2]",
+    title: "AVATheBrand",
     description:
-      "[PROJECT_DESCRIPTION_2] — Cloud-native infrastructure automation platform with infrastructure-as-code and CI/CD pipelines.",
+      "Headless e-commerce platform built with Next.js, tRPC, and Supabase, integrating Shopify as the commerce backend to enable custom storefront behavior beyond standard themes.",
     highlights: [
-      "Automated infrastructure provisioning with Terraform",
-      "Multi-cloud deployment orchestration",
-      "Real-time monitoring and alerting system",
+      "Internal admin tooling for site content management",
+      "Backend APIs and data workflows for advanced storefront features",
+      "Shopify integration for product management and checkout",
     ],
-    stack: ["Python", "Terraform", "GCP", "Prometheus", "Grafana", "GitHub Actions"],
-    github: "[GITHUB_PROJECT_2_URL]",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "tRPC",
+      "Supabase",
+      "Shopify API",
+      "shadcn/ui",
+    ],
+    demo: "https://avathebrand.com",
+    demoLabel: "Visit Site",
     image: "[PROJECT_2_SCREENSHOT]",
   },
   {
-    title: "[PROJECT_NAME_3]",
+    title: "Hydro Resort",
     description:
-      "[PROJECT_DESCRIPTION_3] — Distributed data processing pipeline handling millions of events per day with fault tolerance and observability.",
+      "Full-featured booking and payments platform supporting reservations and scheduling for a private resort, with real-time calendar visibility and integrated payment processing.",
     highlights: [
-      "Apache Kafka for event streaming",
-      "Distributed processing with worker pools",
-      "Full observability with OpenTelemetry",
+      "Internal admin tooling for booking and reservation management",
+      "PayMongo payment gateway integration",
+      "Google Calendar API for real-time booking visibility",
     ],
-    stack: ["Go", "Kafka", "MongoDB", "Docker", "Datadog", "AWS Lambda"],
-    github: "[GITHUB_PROJECT_3_URL]",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "tRPC",
+      "MongoDB",
+      "shadcn/ui",
+      "PayMongo",
+    ],
+    demo: "https://www.hydroresortmnl.com/",
+    demoLabel: "Visit Site",
     image: "[PROJECT_3_SCREENSHOT]",
   },
 ]
@@ -167,23 +192,6 @@ export function Projects() {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  {project.github && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="gap-2"
-                      asChild
-                    >
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Source Code
-                      </a>
-                    </Button>
-                  )}
                   {project.demo && (
                     <Button size="sm" className="gap-2" asChild>
                       <a
@@ -192,7 +200,7 @@ export function Projects() {
                         rel="noopener noreferrer"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        Live Demo
+                        {project.demoLabel || "Live Demo"}
                       </a>
                     </Button>
                   )}
