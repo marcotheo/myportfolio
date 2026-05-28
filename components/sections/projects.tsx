@@ -121,8 +121,8 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="max-w-2xl text-lg text-neutral-400">
-            Production-ready systems built with scalability, reliability, and
-            engineering excellence in mind.
+            Systems and products focused on scalability, operational workflows,
+            and modern application architecture.
           </p>
         </motion.div>
 
