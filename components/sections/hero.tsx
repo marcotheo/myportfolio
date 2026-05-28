@@ -74,8 +74,8 @@ export function Hero() {
             variants={item}
             className="mb-8 max-w-2xl text-lg leading-relaxed text-neutral-300 md:text-xl"
           >
-            [SHORT_INTRO] — Backend engineer focused on cloud infrastructure,
-            distributed systems, and building production-ready SaaS platforms.
+            Full-stack engineer specializing in backend systems, cloud
+            infrastructure, and scalable SaaS applications.
           </motion.p>
 
           <motion.div variants={item} className="flex flex-wrap gap-4">

@@ -1,12 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import {
-  Database,
-  Server,
-  Cloud,
-  Code2,
-} from "lucide-react"
+import { Database, Server, Cloud, Code2 } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { SectionContainer } from "@/components/shared/section-container"
 
@@ -18,51 +13,51 @@ interface ExpertiseCategory {
 
 const expertiseCategories: ExpertiseCategory[] = [
   {
-    title: "Backend Systems",
+    title: "Backend & Languages",
     icon: <Server className="h-6 w-6" />,
     technologies: [
-      "Node.js / Express",
-      "Python / FastAPI",
-      "Go",
-      "REST & GraphQL APIs",
-      "WebSockets",
-      "Microservices",
+      "TypeScript / Node.js",
+      "Golang",
+      "REST APIs",
+      "tRPC",
+      "NestJS",
+      "MongoDB",
     ],
   },
   {
-    title: "Cloud Infrastructure",
+    title: "Cloud Infrastructure (AWS)",
     icon: <Cloud className="h-6 w-6" />,
     technologies: [
-      "AWS (EC2, Lambda, S3, RDS)",
-      "Google Cloud Platform",
-      "Terraform",
-      "Docker",
-      "Kubernetes",
-      "CI/CD Pipelines",
+      "Lambda, ECS (EC2)",
+      "API Gateway, CloudFront",
+      "S3, DynamoDB, RDS",
+      "Cognito, IAM, VPC",
+      "PlanetScale",
+      "AWS Architecture",
     ],
   },
   {
-    title: "Databases & Architecture",
+    title: "DevOps & Platform",
     icon: <Database className="h-6 w-6" />,
     technologies: [
-      "PostgreSQL",
-      "MongoDB",
-      "Redis",
-      "Database Design",
-      "Caching Strategies",
-      "Data Modeling",
+      "Docker",
+      "CI/CD Pipelines",
+      "GitHub Actions",
+      "SST Ion, Pulumi",
+      "AWS CDK",
+      "Datadog Monitoring",
     ],
   },
   {
     title: "Full Stack Development",
     icon: <Code2 className="h-6 w-6" />,
     technologies: [
-      "TypeScript",
       "React / Next.js",
       "Tailwind CSS",
-      "System Design",
-      "API Design",
-      "Testing & Quality",
+      "tRPC",
+      "Supabase",
+      "Shopify Integration",
+      "Payment APIs",
     ],
   },
 ]
@@ -103,8 +98,8 @@ export function Expertise() {
             Technical Expertise
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-neutral-400">
-            Specialized in building scalable backend systems, cloud
-            infrastructure, and production-ready applications.
+            5+ years of experience building production-grade backend systems and
+            AWS infrastructure for scalable applications.
           </p>
         </motion.div>
 

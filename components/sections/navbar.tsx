@@ -53,7 +53,7 @@ export function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" })
           }}
         >
-          [FULL_NAME]
+          Marco Theo Butalid
         </a>
 
         <ul className="flex items-center gap-1 md:gap-2">
