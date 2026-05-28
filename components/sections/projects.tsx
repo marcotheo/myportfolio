@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -37,9 +38,8 @@ const projects: Project[] = [
       "AWS",
       "Drizzle ORM",
     ],
-    github: "[GITHUB_PROJECT_1_URL]",
-    demo: "[DEMO_PROJECT_1_URL]",
-    image: "[PROJECT_1_SCREENSHOT]",
+    demo: "https://dev.kardops.com/sign-in",
+    image: "/kardops-screenshot.png",
   },
   {
     title: "AVATheBrand",
@@ -60,7 +60,7 @@ const projects: Project[] = [
     ],
     demo: "https://avathebrand.com",
     demoLabel: "Visit Site",
-    image: "[PROJECT_2_SCREENSHOT]",
+    image: "/avathebrand-screenshot.png",
   },
   {
     title: "Hydro Resort",
@@ -81,7 +81,7 @@ const projects: Project[] = [
     ],
     demo: "https://www.hydroresortmnl.com/",
     demoLabel: "Visit Site",
-    image: "[PROJECT_3_SCREENSHOT]",
+    image: "/hydroresort-screenshot.png",
   },
 ]
 
@@ -141,16 +141,25 @@ export function Projects() {
                   index % 2 === 1 ? "lg:col-start-2" : ""
                 }`}
               >
-                <div className="flex h-full items-center justify-center p-8 text-neutral-600">
-                  <div className="text-center">
-                    <div className="mb-2 text-sm font-medium">
-                      {project.image}
-                    </div>
-                    <div className="text-xs text-neutral-700">
-                      Screenshot placeholder
+                {project.image.startsWith("/") ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center p-8 text-neutral-600">
+                    <div className="text-center">
+                      <div className="mb-2 text-sm font-medium">
+                        {project.image}
+                      </div>
+                      <div className="text-xs text-neutral-700">
+                        Screenshot placeholder
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </Card>
 
               {/* Project Details */}
